@@ -19,26 +19,26 @@
                 {% csrf_token %}
                 <div class="form-group">
                     <label for="a">Entrer a :</label>
-                    <input type="number" class="form-control" value={{a}} id="a" />
+                    <input type="number" step=any class="form-control" value={{a}} id="a" name="a" />
                 </div>
                 <div class="form-group">
                     <label for="b">Entrer b :</label>
-                    <input type="number" class="form-control" value={{b}} id="b" />
+                    <input type="number" step=any class="form-control" value={{b}} id="b" name="b" />
                 </div>
                 <div class="form-group">
                     <label for="c">Entrer c :</label>
-                    <input type="number" class="form-control" value={{c}} id="c" />
+                    <input type="number" step=any class="form-control" value={{c}} id="c" name="c" />
                 </div>
                 <div class="form-group">
                     <label for="x">Entrer x :</label>
-                    <input type="number" class="form-control" value={{x}} id="x" />
+                    <input type="number" step=any class="form-control" value={{x}} id="x" name="x" />
                 </div>
                 <div>
                     <label for="t">Résultat :</label>
-                    {{t}}
+                    <p>{{t}}</p>
                 </div>
                 <div class="text-center bouton">
-                    <button type="button" class="btn btn-primary" id="submitButton">Valider</button>
+                    <button type="submit" class="btn btn-primary" id="submitButton">Valider</button>
                 </div>
             </form>
         </div>
