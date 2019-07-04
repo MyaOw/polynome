@@ -1,0 +1,48 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}">
+    <title> 
+        {{title}} 
+    </title>
+</head>
+<body>
+    <div class="container">
+        <div class="col-md-4 col-md-offset-4">
+            <h1 class="text-center">ax² + bx + c</h1>
+
+            <form method="post" id="formulaire">
+                {% csrf_token %}
+                <div class="form-group">
+                    <label for="a">Entrer a :</label>
+                    <input type="number" class="form-control" value={{a}} id="a" />
+                </div>
+                <div class="form-group">
+                    <label for="b">Entrer b :</label>
+                    <input type="number" class="form-control" value={{b}} id="b" />
+                </div>
+                <div class="form-group">
+                    <label for="c">Entrer c :</label>
+                    <input type="number" class="form-control" value={{c}} id="c" />
+                </div>
+                <div class="form-group">
+                    <label for="x">Entrer x :</label>
+                    <input type="number" class="form-control" value={{x}} id="x" />
+                </div>
+                <div>
+                    <label for="t">Résultat :</label>
+                    {{t}}
+                </div>
+                <div class="text-center bouton">
+                    <button type="button" class="btn btn-primary" id="submitButton">Valider</button>
+                </div>
+            </form>
+        </div>
+        
+    </div>
+</body>
+</html>
